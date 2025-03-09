@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* body {
+  background-color: #fbe7c6;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff8fab;
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd166;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: #ff8fab;
+      text-align: center;
+      padding: 15px 0;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+/* dashboard */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Warna Latar */
+/* .container {
+  
+} */
+
+/* Container Utama */
+.container {
+  background-color: #F9EAE5;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  /* border-radius: 10px; */
+}
+
+/* Bagian Hero Section */
+.hero-section {
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+}
+
+/* Konten Teks */
+.hero-content {
+  max-width: 500px;
+  padding: 1%;
+}
+
+.category {
+  font-size: 14px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Gambar */
+.hero-image {
+  padding: 1%;
+  position: relative;
+  top: 66px;
+}
+
+.hero-image img {
+  max-width: 550px;
+  height: auto;
+}
+
+/* Responsif */
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-content {
+      margin-bottom: 20px;
+  }
+
+  .hero-image {
+    padding: 1%;
+    position: relative;
+    top: 59px;
+    display: inline-block;
+  }
+
+  .hero-image::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 10px solid #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+  .hero-image img {
+      max-width: 300px;
+  }
+}
