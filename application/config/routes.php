@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'future_trend/FutureTrend';
+$route['default_controller'] = 'future_trend/Futuretrend';
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['futuretrend/admin'] = 'admin_future/admin';

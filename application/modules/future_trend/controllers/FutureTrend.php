@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FutureTrend extends FrontendController {
+class Futuretrend extends FrontendController {
 	//
     public $CI;
 
