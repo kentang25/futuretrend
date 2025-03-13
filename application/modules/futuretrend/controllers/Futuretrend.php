@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Futuretrend extends FrontendController {
+class futuretrend extends FrontendController {
 	//
     public $CI;
 
@@ -36,7 +36,7 @@ class Futuretrend extends FrontendController {
      *
      * @return [type] [description]
      */
-	public function index() {        
+	public function index(){        
 		$this->template_user('v_future', $this->data, true);
 	}
 
