@@ -57,4 +57,24 @@ class Data_barang extends BackendController {
         $this->template_admin('v_edit_data', $this->data,true);
     }
 
+    public function update($id)
+    {
+        $this->M_data_barang->update_data($id);
+        redirect('admin/data-barang');
+    }
+
+    public function delete($id)
+    {
+        $this->M_data_barang->delete_data($id);
+        redirect('admin/data-barang');
+    }
+
+    public function detail($id)
+    {
+        $data_detail = $this->M_data_barang->detail_data($id);
+        $this->data['detail'] = $data_detail;
+
+            $this->template_admin('v_detail',$this->data,true);
+    }
+
 }

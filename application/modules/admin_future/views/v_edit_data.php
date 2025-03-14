@@ -1,11 +1,11 @@
 <div class="container">
 
     <?php foreach($edit_data as $key => $e_data) : ?>
-        <form method="POST" action="<?= base_url(). 'admin_futuretrend/data_barang/edit/'. $e_data->id_barang?> ">
+        <form method="POST" action="<?= base_url(). 'admin_future/data_barang/update/'. $e_data->id_barang?> ">
             <label>Nama Barang</label>
                 <input type="text" name="nama_brg" class="form-control mb-3" value="<?= $e_data->nama_brg ?>">
             <label>Kateogri</label>
-                <select name="katerogi" class="form-control mb-3">
+                <select name="kategori" class="form-control mb-3">
                     <option><?= $e_data->kategori ?></option>
                     <option>Gelang</option>
                     <option>Kalung</option>

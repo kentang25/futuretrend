@@ -47,6 +47,37 @@
             return $query;
         }
 
+        public function update_data($id)
+        {
+            $nama_brg   = $this->input->post('nama_brg');
+            $harga      = $this->input->post('harga');
+            $kategori   = $this->input->post('kategori');
+            $stok       = $this->input->post('stok');
+            
+                $data = array(
+                    'nama_brg'  => $nama_brg,
+                    'harga'     => $harga,
+                    'kategori'  => $kategori,
+                    'stok'      => $stok
+                );
+
+                $this->db->where('id_barang',$id);
+                $query = $this->db->update('tb_data_barang',$data);
+                return $query;
+        }
+
+        public function delete_data($id)
+        {
+            $query = $this->db->delete('tb_data_barang', array('id_barang'=>$id));
+            return $query;
+        }
+
+        public function detail_data($id)
+		{
+			$query = $this->db->get_where('tb_data_barang', array('id_barang'=>$id))->row();
+			return $query;
+		}
+
     }
 
 ?>
