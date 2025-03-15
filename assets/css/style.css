@@ -7,16 +7,23 @@ body {
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .navbar-nav .nav-link {
-  color: white;
-  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.navbar-nav .nav-link:hover {
+  background-color: #f8f9fa;
+  color: #d63384;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .hero {
-  background-image: url('../../assets/img/products/model_4.webp');
+  background-image: url('../../assets/img/products/model_1_hd.jpg');
   background-size: cover;
-  background-position: -20% 60%;
+  background-position: -20% 70%;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -36,17 +43,28 @@ body {
 }
 .hero h1 {
   font-size: 3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 .btn-shop {
   background: #ff69b4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border: none;
   padding: 10px 25px;
   font-size: 1.2rem;
   color: white;
   border-radius: 30px;
   transition: 0.3s;
+  text-decoration: none;
 }
+
 .btn-shop:hover {
   background: #ff1493;
+}
+
+.main-footer{
+  text-align: center;
+  background: #ffb6c1;
+  color:black;
+  font-weight: bold;
 }
