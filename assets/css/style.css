@@ -23,7 +23,8 @@ body {
 .hero {
   background-image: url('../../assets/img/products/model_1_hd.jpg');
   background-size: cover;
-  background-position: -20% 70%;
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -68,3 +69,6 @@ body {
   color:black;
   font-weight: bold;
 }
+
+/* --- main content --- */
+

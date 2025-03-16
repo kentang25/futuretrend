@@ -18,7 +18,7 @@
 
                 if($gambar=''){}else{
                     $config['upload_path']      = FCPATH. 'assets/uploads';
-                    $config['allowed_types']    = 'jpg|gif|jpeg';
+                    $config['allowed_types']    = 'jpg|gif|jpeg|webp';
 
                         $this->load->library('upload', $config);
 

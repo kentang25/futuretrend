@@ -24,7 +24,7 @@ class futuretrend extends FrontendController {
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
-        // $this->load->model('M_master');
+        $this->load->model('M_barang');
         // $this->load->model('M_news');
         // $this->load->model('M_gallery');
     }
@@ -36,7 +36,8 @@ class futuretrend extends FrontendController {
      *
      * @return [type] [description]
      */
-	public function index(){        
+	public function index(){
+        $this->data['barang'] = $this->M_barang->tampil_data()->result();
 		$this->template_user('v_future', $this->data, true);
 	}
 
