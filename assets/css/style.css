@@ -72,3 +72,13 @@ body {
 
 /* --- main content --- */
 
+
+/* --- end main content --- */
+
+/* --- costumize pad --- */
+
+.custom-spad{
+  background: #F6F0F0;
+  height: 20%;
+}
+
