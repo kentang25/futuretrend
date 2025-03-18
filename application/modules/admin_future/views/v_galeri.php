@@ -15,15 +15,29 @@
             <thead>
                 <tr>
                     <td>No</td>
-                    <td>Nama Barang</td>
-                    <td>Kategori</td>
-                    <td>Harga</td>
+                    <td>Nama Galeri</td>
+                    <td>Gambar</td>
+                    <td>Created_at</td>
                     <td>Aksi</td>
                 </tr>
             </thead>
             
             <tbody>
-                
+            <?php
+                    $no = 0;
+                    foreach ($galeri as $key => $glr) :
+                ?>
+                <tr>
+                    <td><?= ++$no ?></td>
+                    <td><?= $glr->nama_galeri ?></td>
+                    <td><img src="<?= base_url(). 'assets/uploads/' . $glr->gambar ?>" width="100"></td>
+                    <td><?= $glr->created_at ?></td>
+                    <td>
+                        <?= anchor('admin_future/upload_galeri/delete/'. $glr->id_galeri, 
+                        '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
             </tbody>
             
         </table>

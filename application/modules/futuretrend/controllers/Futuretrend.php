@@ -38,6 +38,8 @@ class futuretrend extends FrontendController {
      */
 	public function index(){
         $this->data['barang'] = $this->M_barang->tampil_data()->result();
+        $this->data['karya'] = $this->M_barang->tampil_karya()->result();
+        $this->data['galeri'] = $this->M_barang->tampil_galeri()->result();
 		$this->template_user('v_future', $this->data, true);
 	}
 

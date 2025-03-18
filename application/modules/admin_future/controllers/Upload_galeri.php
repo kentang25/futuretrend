@@ -43,7 +43,13 @@ class Upload_galeri extends BackendController {
 
     public function insert()
     {
-        $this->M_karya_galeri->insert_data();
+        $this->M_karya_galeri->insert_galeri();
+        redirect('admin/galeri');
+    }
+
+    public function delete($id)
+    {
+        $this->M_karya_galeri->delete_galeri($id);
         redirect('admin/galeri');
     }
 

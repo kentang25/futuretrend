@@ -35,6 +35,12 @@
 
         }
 
+        public function delete_karya($id)
+        {
+            $query = $this->db->delete('tb_karya', array('id_karya'=>$id));
+            return $query;
+        }
+
         public function tampil_galeri()
         {
             $query = $this->db->get('tb_galeri');
@@ -62,9 +68,15 @@
                 'gambar'        => $galeri
             );
 
-            $query = $this->db->insert('tb_karya',$data);
+            $query = $this->db->insert('tb_galeri',$data);
             return $query;
 
+        }
+
+        public function delete_galeri($id)
+        {
+            $query = $this->db->delete('tb_galeri',array('id_galeri' => $id));
+            return $query;
         }
                 
         

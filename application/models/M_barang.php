@@ -6,6 +6,18 @@
             $query = $this->db->limit(3)->get('tb_data_barang');
             return $query;
         }
+        
+        public function tampil_karya()
+        {
+            $query = $this->db->limit(3)->get('tb_karya');
+            return $query;
+        }
+
+        public function tampil_galeri()
+        {
+            $query = $this->db->limit(3)->get('tb_galeri');
+            return $query;
+        }
     }
 
 ?>

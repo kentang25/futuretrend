@@ -47,4 +47,10 @@ class Upload_karya extends BackendController {
         redirect('admin/karya');
     }
 
+    public function delete($id)
+    {
+        $this->M_karya_galeri->delete_karya($id);
+        redirect('admin/karya');
+    }
+
 }

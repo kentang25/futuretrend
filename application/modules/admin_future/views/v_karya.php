@@ -32,7 +32,7 @@
                     <td><img src="<?= base_url(). 'assets/uploads/' . $kry->gambar ?>" width="100"></td>
                     <td><?= $kry->created_at ?></td>
                     <td>
-                        <?= anchor('admin_future/data_barang/delete/'. $kry->id_karya, 
+                        <?= anchor('admin_future/upload_karya/delete/'. $kry->id_karya, 
                         '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
                     </td>
                 </tr>
