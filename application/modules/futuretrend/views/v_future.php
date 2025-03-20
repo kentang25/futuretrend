@@ -76,6 +76,36 @@
     </div>
 </div>
 
+<!-- Services Section Begin -->
+<section class="services spad mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services__item">
+                    <i class="fa fa-car"></i>
+                    <h6>Free Shipping</h6>
+                    <p>Area kediri saja ya</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services__item">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <h6>Money Back Guarantee</h6>
+                    <p>uang kembali jik ada masalah</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services__item">
+                    <i class="fa fa-headphones"></i>
+                    <h6>Payment Secure</h6>
+                    <p>Pembayaran 100% aman</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
 
 
     
