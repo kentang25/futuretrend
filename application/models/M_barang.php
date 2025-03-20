@@ -15,7 +15,7 @@
 
         public function tampil_galeri()
         {
-            $query = $this->db->limit(3)->get('tb_galeri');
+            $query = $this->db->limit(6)->get('tb_galeri');
             return $query;
         }
     }

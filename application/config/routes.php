@@ -53,8 +53,13 @@ $route['default_controller'] = 'futuretrend';
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;
 
-// --- admin ---
+// --- admin futuretrend ---
 $route['admin'] = 'admin_future/admin';
 $route['admin/data-barang'] = 'admin_future/data_barang';
 $route['admin/karya'] = 'admin_future/upload_karya';
 $route['admin/galeri'] = 'admin_future/upload_galeri';
+
+
+// --- user futuretrend ----
+
+$route['products'] = 'futuretrend/products';

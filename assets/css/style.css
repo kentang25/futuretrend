@@ -18,6 +18,14 @@
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
+.dropdown-item .dropdown-menu {
+	border: 1px solid black;
+	font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
 .navbar-nav .nav-link:hover {
   background-color: #f8f9fa;
   color: #d63384;
@@ -192,8 +200,21 @@
 	margin-top: 10px;
 }
 
-/* @media only screen and (min-width:768px;) and (min-width:991px;) {
+/* --- footer --- */
+
+.main-footer {
+	background: #ffb6c1;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+}
+.bullet {
+	margin: 0 5px;
+}
+
+@media only screen and (min-width:768px;) and (min-width:991px;) {
   .instagram__item{
     background-repeat: no-repeat;
   }
-} */
+
+}

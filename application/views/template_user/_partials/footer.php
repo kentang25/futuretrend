@@ -58,11 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!-- Instagram End -->
 <footer class="main-footer text-center py-3">
-    <div class="container">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div class="footer-left">
             <span>&copy; 2025 <span class="bullet">•</span> FutureTrend</span>
         </div>
-        <div class="footer-right">
+        <div class="footer-right mt-2 mt-md-0">
             <span>Powered by FutureTrend Team</span>
         </div>
     </div>
@@ -76,28 +76,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 </html>
 
-
-
-<style>
-    .main-footer {
-        background: #ffb6c1;
-        color: black;
-        font-size: 14px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .bullet {
-        color: #e74c3c;
-        font-weight: bold;
-        margin: 0 5px;
-    }
-
-    .footer-left, .footer-right {
-        display: inline-block;
-        padding: 5px 10px;
-    }
-
-    .footer-right {
-        float: right;
-    }
-</style>
