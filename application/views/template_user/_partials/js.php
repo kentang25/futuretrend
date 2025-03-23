@@ -1,5 +1,6 @@
 
 <!-- Js Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="<?=base_url() ?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?=base_url() ?>assets/modules/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?=base_url() ?>assets/js/jquery.magnific-popup.min.js"></script>
@@ -10,6 +11,8 @@
 <script src="<?=base_url() ?>assets/js/owl.carousel.min.js"></script>
 <script src="<?=base_url() ?>assets/js/jquery.nicescroll.min.js"></script>
 <script src="<?=base_url() ?>assets/js/main.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>

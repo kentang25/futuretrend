@@ -13,6 +13,10 @@
                     <th><?= $detail->kategori ?></th>
                 </tr>
                 <tr>
+                    <th>News</th>
+                    <th><?= $detail->news ?></th>
+                </tr>
+                <tr>
                     <th>Stok</th>
                     <th><?= $detail->stok ?></th>
                 </tr>

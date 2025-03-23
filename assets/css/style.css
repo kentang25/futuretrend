@@ -137,6 +137,30 @@
 	margin-bottom: 0;
 }
 
+/* --- products --- */
+.trend_content{
+	background-color: #f9f9f9;
+	display:flex;
+	flex-direction: column;
+	margin-top: 20px;
+	padding: 15px;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trend_item_text{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.harga{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #e74c3c;
+	margin-top: 5px;
+}
+
 /* --- instagram --- */
 
 .instagram__item {
@@ -212,9 +236,9 @@
 	margin: 0 5px;
 }
 
-@media only screen and (min-width:768px;) and (min-width:991px;) {
-  .instagram__item{
-    background-repeat: no-repeat;
-  }
-
+ /* Dropdown muncul saat di-hover di layar besar */
+ @media (min-width: 992px) {
+	.navbar-nav .dropdown:hover .dropdown-menu {
+		display: block;
+	}
 }

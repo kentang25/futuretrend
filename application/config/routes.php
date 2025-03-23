@@ -61,5 +61,6 @@ $route['admin/galeri'] = 'admin_future/upload_galeri';
 
 
 // --- user futuretrend ----
-
+$route['futuretrend'] = 'futuretrend/futuretrend';
 $route['products'] = 'futuretrend/products';
+$route['kontak'] = 'futuretrend/kontak';
