@@ -24,7 +24,7 @@ class Products extends FrontendController {
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
-        // $this->load->model('M_products');
+        $this->load->model('M_products');
         // $this->load->model('M_news');
         // $this->load->model('M_gallery');
     }
@@ -37,9 +37,10 @@ class Products extends FrontendController {
      * @return [type] [description]
      */
 	public function index(){
-        // $this->data['barang'] = $this->M_barang->tampil_data()->result();
-        // $this->data['karya'] = $this->M_barang->tampil_karya()->result();
-        // $this->data['galeri'] = $this->M_barang->tampil_galeri()->result();
+        // $this->data['produk'] = $this->M_barang->tampil_data()->result();
+        $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
+        $this->data['best_seller'] = $this->M_products->best_seller()->result();
+        $this->data['feature'] = $this->M_products->feature()->result();
 		$this->template_user('v_products', $this->data, true);
 	}
 
