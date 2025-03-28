@@ -26,6 +26,12 @@
             return $query;
         }
 
+        public function all_data_kategori()
+        {
+            $query = $this->db->get('tb_data_barang');
+            return $query;
+        }
+
     }
 
 ?>

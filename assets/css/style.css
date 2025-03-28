@@ -149,6 +149,28 @@
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.section-title {
+	margin-bottom: 30px;
+}
+
+.section-title h4 {
+	color: Blue;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+}
+
+.section-title h4:after {
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	height: 2px;
+	width: 70px;
+	background: #ca1515;
+	content: "";
+}
+
 .trend_item_pic{
 	width: 100%;
 	height: 200%;
@@ -167,6 +189,36 @@
 	color: #e74c3c;
 	margin-top: 5px;
 }
+
+/* --- kategori spad --- */
+
+.kategori-spad h4{
+	color: Blue;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.kategori-spad .harga{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #e74c3c;
+	margin-top: 5px;
+}
+
+#kategori-list li a {
+	text-decoration: none;
+	color: black;
+	padding: 5px 10px;
+	transition: 0.3s;
+}
+#kategori-list li.active a {
+	font-weight: bold;
+	color: blue;
+}
+.produk-item {
+	display: none; /* Semua produk disembunyikan dulu */
+}
+
 
 /* --- instagram --- */
 

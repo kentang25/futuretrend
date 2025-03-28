@@ -37,11 +37,17 @@ class Products extends FrontendController {
      * @return [type] [description]
      */
 	public function index(){
-        // $this->data['produk'] = $this->M_barang->tampil_data()->result();
+        $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
         $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
         $this->data['best_seller'] = $this->M_products->best_seller()->result();
         $this->data['feature'] = $this->M_products->feature()->result();
 		$this->template_user('v_products', $this->data, true);
 	}
+
+    // public function all_kategori()
+    // {
+    //     $this->M_products->all_data_kategori();
+    //     $this->template_user()
+    // }
 
 }
