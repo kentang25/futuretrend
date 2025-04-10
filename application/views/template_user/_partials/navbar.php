@@ -18,7 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link fw-semibold text-dark px-3 py-2 rounded-pill" href="<?= base_url('products')?>">Produk</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold text-dark px-3 py-2 rounded-pill" href="<?= base_url('products')?>">Cart</a>
+                </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark px-3 py-2 rounded-pill" id="navbarDropdown"

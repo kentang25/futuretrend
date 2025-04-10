@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Products extends FrontendController {
+class Galeri extends FrontendController {
 	//
     public $CI;
 
@@ -24,7 +24,7 @@ class Products extends FrontendController {
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
-        $this->load->model('M_products');
+        $this->load->model('M_karya_galeri');
         // $this->load->model('M_news');
         // $this->load->model('M_gallery');
     }
@@ -37,20 +37,12 @@ class Products extends FrontendController {
      * @return [type] [description]
      */
 	public function index(){
-        $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
-        $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
-        $this->data['best_seller'] = $this->M_products->best_seller()->result();
-        $this->data['feature'] = $this->M_products->feature()->result();
-		$this->template_user('v_products', $this->data, true);
+        // $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
+        // $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
+        // $this->data['best_seller'] = $this->M_products->best_seller()->result();
+        $this->data['galeri'] = $this->M_karya_galeri->tampil_galeri()->result();
+		$this->template_user('v_galeri', $this->data, true);
 	}
-
-    public function detail($id)
-    {
-        $detail_products = $this->M_products->detail_products($id)->row();
-        $this->data['detail_products'] = $detail_products;
-
-        $this->template_user('v_detail_products',$this->data,true);
-    }
 
     // public function all_kategori()
     // {

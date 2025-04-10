@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Products extends FrontendController {
+class Cart extends FrontendController {
 	//
     public $CI;
 
@@ -37,25 +37,11 @@ class Products extends FrontendController {
      * @return [type] [description]
      */
 	public function index(){
-        $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
-        $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
-        $this->data['best_seller'] = $this->M_products->best_seller()->result();
-        $this->data['feature'] = $this->M_products->feature()->result();
-		$this->template_user('v_products', $this->data, true);
+        // $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
+        // $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
+        // $this->data['best_seller'] = $this->M_products->best_seller()->result();
+        // $this->data['feature'] = $this->M_products->feature()->result();
+		$this->template_user('v_cart', $this->data, true);
 	}
-
-    public function detail($id)
-    {
-        $detail_products = $this->M_products->detail_products($id)->row();
-        $this->data['detail_products'] = $detail_products;
-
-        $this->template_user('v_detail_products',$this->data,true);
-    }
-
-    // public function all_kategori()
-    // {
-    //     $this->M_products->all_data_kategori();
-    //     $this->template_user()
-    // }
 
 }

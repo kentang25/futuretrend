@@ -24,8 +24,8 @@
                     <?php foreach ($items as $item) : ?>
                     <div class="trend_item">
                         <div class="trend_item_pic">
-                            <img src="<?= base_url() . 'assets/uploads/' . $item->gambar ?>"
-                                class="img-fluid small-img mt-5" alt="Gambar <?= $title; ?>">
+                            <a href="<?= base_url('products/detail/'. $item->id_barang)?>"><img src="<?= base_url() . 'assets/uploads/' . $item->gambar ?>"
+                                class="img-fluid small-img mt-5 rounded-4 overflow-hidden gallery-img" alt="Gambar <?= $title; ?>"></a>
                         </div>
                         <div class="trend_item_text">
                             <h4><?= $item->nama_brg; ?></h4>
@@ -54,8 +54,8 @@
         <div class="row" id="produk-container">
             <?php foreach($all_produk as $key => $all_p) : ?>
                 <div class="col-md-4 produk-item" data-kategori="<?= strtolower($all_p->kategori); ?>">
-                    <img src="<?= base_url(). 'assets/uploads/'. $all_p->gambar ?>" class="img-fluid" alt="<?= $key ?>">
-                    <div class="trend_item_text">
+                    <a href="<?= base_url('products/detail/'. $all_p->id_barang); ?>"><img src="<?= base_url(). 'assets/uploads/'. $all_p->gambar ?>" class="img-fluid rounded-4 overflow-hidden gallery-img" alt="<?= $key ?>"></a>
+                    <div class="kategori_item_text">
                         <h4><?= $all_p->nama_brg; ?></h4>
                         <h4 class="harga">Rp. <?= $all_p->harga; ?></h4>
                     </div>

@@ -32,6 +32,12 @@
             return $query;
         }
 
+        public function detail_products($id)
+        {
+            $query = $this->db->get_where('tb_data_barang', array('id_barang'=>$id));
+            return $query;
+        }
+
     }
 
 ?>

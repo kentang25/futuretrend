@@ -1,6 +1,124 @@
 *{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.section-auth{
+	background-color: #f4f6f8;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Left Panel */
+.login-left {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1517430816045-df4b7de1670d?auto=format&fit=crop&w=600') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.login-left p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Right Panel */
+.login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.forgot {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #009eb3;
+}
+
+.signup-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+}
 /* body {
   font-family: 'Poppins', sans-serif;
   
@@ -192,10 +310,15 @@
 
 /* --- kategori spad --- */
 
-.kategori-spad h4{
+.kategori-spad .title{
 	color: Blue;
 	font-weight: 600;
 	text-transform: uppercase;
+}
+
+.kategori_item_text{
+	text-align: center;
+	margin-top: 10px;
 }
 
 .kategori-spad .harga{
@@ -223,6 +346,7 @@
 /* --- instagram --- */
 
 .instagram__item {
+	margin-top: 50px;
 	height: 320px;
 	display: -webkit-box;
 	display: -ms-flexbox;
