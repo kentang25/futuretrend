@@ -6,7 +6,7 @@
         {
             $username   = $this->input->post('username');
             $email      = $this->input->post('email');
-            $password   = $this->input->post('password');
+            $password   = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
 
                 $data = array(
                     'username'  => $username,
@@ -14,7 +14,17 @@
                     'password'  => $password
                 );
 
-            $this->db->insert('tb_auth_user');
+            $query = $this->db->insert('tb_auth_user',$data);
+            return $query;
+        }
+
+        public function get_user($password,$username)
+        {
+            $query  = $this->db->get_where('tb_auth_user',array('username'=>$username));
+            $user   = $query->row_array();
+
+                if($user && password_verify($password,$user['password']));
+                return $user;
         }
 
     }

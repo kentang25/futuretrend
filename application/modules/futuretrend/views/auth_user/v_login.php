@@ -9,22 +9,14 @@
 
         <!-- Right Side -->
         <div class="login-right">
-            <h2>REGISTER</h2>
-            <form method="POST" action="<?= base_url('register') ?>">
+            <h2>LOGIN</h2>
+            <form method="POST" action="<?= base_url('login') ?>">
                 <label for="username">Username</label>
                 <input type="username" id="username" name="username" placeholder="Enter username" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter email" required>
 
                 <label for="password">Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="password" name="password" placeholder="Enter password" required>
-                    <!-- <span class="toggle-password" onclick="togglePassword()">👁️</span> -->
-                </div>
-                <label for="konfirm_password">Konfirmasi Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="konfirm_password" name="konfirm_password" placeholder="Konfirmasi password" required>
                     <!-- <span class="toggle-password" onclick="togglePassword()">👁️</span> -->
                 </div>
 
@@ -32,7 +24,7 @@
                     <a href="#">Forgot password?</a>
                 </div> -->
 
-                <button type="submit" class="btn-login">Register</button>
+                <button type="submit" class="btn-login">Login</button>
             </form>
 
             <!-- <p class="signup-text">Don’t have an account? <a href="#">Signup</a></p> -->
