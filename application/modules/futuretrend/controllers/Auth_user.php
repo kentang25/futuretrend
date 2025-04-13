@@ -76,8 +76,8 @@ class Auth_user extends FrontendController {
                         redirect('login');
                 }else{
                     $sess = $this->session->set_userdata('id_user',$data['id_user']);
-                    var_dump($sess);
-                    exit();
+                    // var_dump($sess);
+                    // exit();
                     $this->session->set_userdata('is_loggin',TRUE);
 
                     redirect(base_url('futuretrend'));

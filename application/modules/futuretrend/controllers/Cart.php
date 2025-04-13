@@ -24,8 +24,8 @@ class Cart extends FrontendController {
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
-        $this->load->model('M_products');
-        // $this->load->model('M_news');
+        $this->load->model('M_cart');
+        $this->load->model('M_auth_user');
         // $this->load->model('M_gallery');
     }
 
@@ -36,12 +36,48 @@ class Cart extends FrontendController {
      *
      * @return [type] [description]
      */
-	public function index(){
-        // $this->data['all_produk'] = $this->M_products->all_data_kategori()->result();
-        // $this->data['hot_trend'] = $this->M_products->hot_trend()->result();
-        // $this->data['best_seller'] = $this->M_products->best_seller()->result();
-        // $this->data['feature'] = $this->M_products->feature()->result();
-		$this->template_user('v_cart', $this->data, true);
-	}
+
+
+    public function index()
+    {
+        $id_user = $this->M_auth_user->get_id_user();
+
+        $this->data['cart'] = $this->M_cart->tampil_cart($id_user)->result();
+        $this->template_user('v_cart',$this->data,true);
+    }
+
+	public function addCart($id_brg)
+    {
+        $barang = $this->M_cart->find($id_brg);
+        $qty = 1;
+        if($this->input->post('qty')){
+            $qty = $this->input->post('qty');
+        }
+
+        $data = array(
+            'id'    => $barang->id_barang,
+            'name'  => $barang->nama_brg,
+            'price' => $barang->harga,
+            'qty'   => $qty
+        );
+
+        $this->cart->insert($data);
+
+        $get_user = $this->M_auth_user->get_id_user();
+
+        $data_cart = array(
+            'id_user'       => $get_user,
+            'id_barang'     => $data['id'],
+            'nama_barang'   => $data['name'],
+            'harga'         => $data['price'],
+            'jumlah'        => $data['qty']
+        );
+
+        if($this->M_cart->insert_data_cart($data_cart)){
+            redirect('products');
+        }
+
+    }
+
 
 }

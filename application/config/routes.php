@@ -63,15 +63,16 @@ $route['admin/galeri'] = 'admin_future/upload_galeri';
 $route['register'] = 'futuretrend/auth_user/register';
 $route['login'] = 'futuretrend/auth_user/login';
 
-
 // --- user futuretrend ----
 $route['futuretrend'] = 'futuretrend/futuretrend';
 $route['products'] = 'futuretrend/products';
 $route['products/detail/(:any)'] = 'futuretrend/products/detail/$1';
 $route['kontak'] = 'futuretrend/kontak';
 
-
 // --- kategori ---
 $route['galeri'] = 'futuretrend/galeri';
 $route['karya'] = 'futuretrend/karya';
 
+// --- cart ----
+$route['cart'] = 'futuretrend/cart';
+$route['addCart/(:any)'] = 'futuretrend/cart/addCart/$1';

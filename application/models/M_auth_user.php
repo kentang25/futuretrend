@@ -18,13 +18,18 @@
             return $query;
         }
 
-        public function get_user($password,$username)
+        public function get_user($username,$password)
         {
             $query  = $this->db->get_where('tb_auth_user',array('username'=>$username));
             $user   = $query->row_array();
 
                 if($user && password_verify($password,$user['password']));
                 return $user;
+        }
+
+        public function get_id_user()
+        {
+            return $this->session->userdata('id_user');
         }
 
     }
