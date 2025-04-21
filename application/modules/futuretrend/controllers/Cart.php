@@ -49,10 +49,16 @@ class Cart extends FrontendController {
 	public function addCart($id_brg)
     {
         $barang = $this->M_cart->find($id_brg);
-        $qty = 1;
-        if($this->input->post('qty')){
-            $qty = $this->input->post('qty');
-        }
+
+        $qty = $this->input->post('qty');
+            var_dump($qty);
+            exit();
+        // $qty = 1;
+        // if($qty = $this->input->post('qty')){
+        //     $qty = $this->input->post('qty');
+        //     var_dump($qty);
+        //     exit();
+        // }
 
         $data = array(
             'id'    => $barang->id_barang,
@@ -74,9 +80,31 @@ class Cart extends FrontendController {
         );
 
         if($this->M_cart->insert_data_cart($data_cart)){
-            redirect('products');
+            redirect('cart');
         }
 
+    }
+
+    public function update_qty()
+    {
+        $id_barang  = $this->input->post('id_barang');
+        $harga      = $this->input->post('harga');
+        $jumlah     = $this->input->post('jumlah');
+
+        $this->M_cart->update_cart_qty($id_barang,$jumlah);
+
+            $cart_item = $this->M_cart->get_cart();
+            $total = 0;
+
+        foreach($cart_item as $item){
+            $total =+ $item->harga * $item->jumlah;
+        }
+
+        header('Content-Type: application/json');
+        echo json_encode([
+            'status' => 'success',
+            'total' => $total
+        ]);
     }
 
 

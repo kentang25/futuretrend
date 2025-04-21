@@ -15,11 +15,22 @@
             return $query;
         }
 
+        public function get_cart()
+        {
+            return $this->db->get('tb_cart')->result();
+        }
+
         public function tampil_cart($id_user)
         {
             $query = $this->db->where('id_user',$id_user)
                               ->get('tb_cart');
             return $query;                                
+        }
+
+        public function update_cart_qty($id_barang,$jumlah)
+        {
+            $this->db->where('id_barang',$id_barang);
+            return $this->db->update('tb_cart',['jumlah'=>$jumlah]);
         }
     }
 

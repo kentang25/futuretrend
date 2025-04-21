@@ -32,6 +32,15 @@
             return $this->session->userdata('id_user');
         }
 
+        public function loggin()
+        {
+            if(!isset($_SESSION['is_loggin'])){
+                return FALSE;
+            }else{
+                return TRUE;
+            }
+        }
+
     }
 
 ?>

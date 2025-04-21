@@ -55,6 +55,11 @@ class Auth_user extends FrontendController {
 
     public function login()
     {
+
+        if($this->M_auth_user->loggin()){
+            redirect(base_url(futuretrend));
+        }
+
         $this->form_validation->set_rules('username','Username','required|trim');
         $this->form_validation->set_rules('password','Password','required|trim');
 

@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 // --- admin futuretrend ---
 $route['admin'] = 'admin_future/admin';
 $route['admin/data-barang'] = 'admin_future/data_barang';
+$route['admin/data-cart'] = 'admin_future/data_cart';
 $route['admin/karya'] = 'admin_future/upload_karya';
 $route['admin/galeri'] = 'admin_future/upload_galeri';
 
@@ -76,3 +77,4 @@ $route['karya'] = 'futuretrend/karya';
 // --- cart ----
 $route['cart'] = 'futuretrend/cart';
 $route['addCart/(:any)'] = 'futuretrend/cart/addCart/$1';
+$route['cart/update-qty'] = 'futuretrend/cart/update_qty';

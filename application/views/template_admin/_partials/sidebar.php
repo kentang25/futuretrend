@@ -29,19 +29,19 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/cart-data') ?>">
+        <a class="nav-link" href="<?= base_url('admin/data-cart') ?>">
             <i class="fa-solid fa-cart-shopping"></i>
             <span>Cart Data</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/orders-data') ?>">
+        <a class="nav-link" href="<?= base_url('admin/data-order') ?>">
             <i class="fas fa-fw fa-file-invoice"></i>
             <span>Orders</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/transaksi-data') ?>">
+        <a class="nav-link" href="<?= base_url('admin/data-transaksi') ?>">
             <i class="fa-solid fa-money-bill"></i>
             <span>Transaksi</span></a>
     </li>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class futuretrend extends FrontendController {
+class Data_cart extends BackendController {
 	//
     public $CI;
 
@@ -24,8 +24,8 @@ class futuretrend extends FrontendController {
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
-        $this->load->model('M_barang');
-        $this->load->model('M_auth_user');
+        $this->load->model('M_data_cart');
+        // $this->load->model('M_news');
         // $this->load->model('M_gallery');
     }
 
@@ -36,15 +36,9 @@ class futuretrend extends FrontendController {
      *
      * @return [type] [description]
      */
-	public function index(){
-        if(!$this->M_auth_user->loggin()){
-            redirect(base_url('login'));
-        }
-
-        $this->data['barang'] = $this->M_barang->tampil_data()->result();
-        $this->data['karya'] = $this->M_barang->tampil_karya()->result();
-        $this->data['galeri'] = $this->M_barang->tampil_galeri()->result();
-		$this->template_user('v_future', $this->data, true);
+	public function index() {
+        $this->data['data_cart'] = $this->M_data_cart->tampil_data_cart()->result();
+		$this->template_admin('v_data_cart', $this->data, true);
 	}
 
 }

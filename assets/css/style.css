@@ -1,5 +1,9 @@
+@font-face {
+  font-family: 'Chuckle-Charm';
+  src: url('../fonts/Chuckle-Charm.otf')format(truetype);
+}
 *{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Chuckle-Charm';
 }
 .section-auth{
 	background-color: #f4f6f8;
@@ -121,10 +125,11 @@ input[type="password"] {
     color: #007bff;
     text-decoration: none;
 }
-/* body {
-  font-family: 'Poppins', sans-serif;
-  
-} */
+
+body {
+  background-color:rgb(128, 128, 128);
+  /* background: red; */
+}
 .navbar {
   background: #ffb6c1; /* Warna pink lembut */
 }

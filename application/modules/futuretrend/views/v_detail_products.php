@@ -30,10 +30,11 @@
                         <tr>
                             <th>Stok</th>
                             <td>
-                                <form method="post">
+                                <form method="post" action="<?= base_url().'addCart/'.$detail_products->id_barang ?>">
                                     <input 
                                         type="number" 
                                         class="form-control"
+                                        id="<?= $detail_products->id_barang ?>"
                                         name="qty"
                                         value="1" 
                                         min="1"
@@ -50,7 +51,7 @@
                     <!-- Tombol Aksi -->
                     <div class="d-flex justify-content-end gap-2">
                         <a href="<?= base_url('products') ?>" class="btn btn-outline-primary">Back</a>
-                        <a href="<?= base_url('addCart/'.$detail_products->id_barang) ?>" class="btn btn-outline-info">Add to cart</a>
+                        <button type="submit"><a href="<?= base_url('addCart/'.$detail_products->id_barang) ?>" class="btn btn-outline-info">Add to cart</a></button>
                         <a href="<?= base_url('admin/data-barang') ?>" class="btn btn-outline-success">Checkout</a>
                     </div>
                 </div>
