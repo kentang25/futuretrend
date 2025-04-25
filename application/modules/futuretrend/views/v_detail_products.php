@@ -27,17 +27,13 @@
                         <tr>
                             <th>Jumlah</th>
                             <td>
-                            <div class="input-group">
-  <input type="number" class="qty-input form-control" 
-         id="qty-input" 
-         name="qty" 
-         value="1" 
-         min="1" 
-         max="<?= $detail_products->stok ?>" 
-         data-id-barang="<?= $detail_products->id_barang ?>">
+                                <div class="input-group">
+                                    <input type="number" class="qty-input form-control" id="qty-input" name="qty"
+                                        value="1" min="1" max="<?= $detail_products->stok ?>"
+                                        data-id-barang="<?= $detail_products->id_barang ?>">
 
-  <!-- <button class="btn btn-outline-info" id="add-cart">Add to cart</button> -->
-</div>
+                                    <!-- <button class="btn btn-outline-info" id="add-cart">Add to cart</button> -->
+                                </div>
 
                             </td>
                         </tr>
@@ -57,35 +53,35 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 <script>
-$(document).ready(function(){
-    $('#add-cart').on('click', function(){
+$(document).ready(function() {
+    $('#add-cart').on('click', function() {
         let input = $('#qty-input');
         let qty = parseInt(input.val());
         let id_barang = input.data('id-barang');
 
         console.log(qty);
-        
-        if(qty < 1 || isNaN(qty)){
+
+        if (qty < 1 || isNaN(qty)) {
             alert('Jumlah tidak valid');
             return;
         }
 
         $.ajax({
-            url : '<?= base_url('addCart') ?>',
-            method : 'POST',
-            data : {
+            url: '<?= base_url('addCart/'. $detail_products->id_barang ); ?>',
+            method: 'POST',
+            data: {
                 id_barang: id_barang,
                 qty: qty
             },
-            success: function(response){
+            success: function(response) {
                 console.log(response);
                 alert('Jumlah berhasil ditambahkan');
             },
-            error: function(xhr, status, error){
+            error: function(xhr, status, error) {
                 console.error(error);
                 alert('Terjadi kesalahan saat menambahkan ke keranjang');
             }

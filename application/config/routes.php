@@ -78,3 +78,8 @@ $route['karya'] = 'futuretrend/karya';
 $route['cart'] = 'futuretrend/cart';
 $route['addCart/(:any)'] = 'futuretrend/cart/addCart/$1';
 $route['cart/update-qty'] = 'futuretrend/cart/update_qty';
+
+
+// --- pembayaran ---
+$route['order'] = 'futuretrend/pembayaran/order';
+$route['pembayaran/(:any)'] = 'futuretrend/pembayaran/pembayaran/$1';
