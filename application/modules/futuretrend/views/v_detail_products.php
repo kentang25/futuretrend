@@ -2,11 +2,8 @@
     <div class="row">
         <!-- Gambar Produk -->
         <div class="col-md-4 d-flex justify-content-center align-items-start">
-            <img 
-                src="<?= base_url() . 'assets/uploads/' . $detail_products->gambar ?>" 
-                class="img-fluid rounded shadow-sm" 
-                style="max-height: 250px; object-fit: cover;" 
-                alt="Gambar Produk">
+            <img src="<?= base_url() . 'assets/uploads/' . $detail_products->gambar ?>"
+                class="img-fluid rounded shadow-sm" style="max-height: 250px; object-fit: cover;" alt="Gambar Produk">
         </div>
 
         <!-- Detail Produk -->
@@ -28,18 +25,20 @@
                             <td><?= $detail_products->news ?></td>
                         </tr>
                         <tr>
-                            <th>Stok</th>
+                            <th>Jumlah</th>
                             <td>
-                                <form method="post" action="<?= base_url().'addCart/'.$detail_products->id_barang ?>">
-                                    <input 
-                                        type="number" 
-                                        class="form-control"
-                                        id="<?= $detail_products->id_barang ?>"
-                                        name="qty"
-                                        value="1" 
-                                        min="1"
-                                        max="<?= $detail_products->stok ?>">
-                                </form>
+                            <div class="input-group">
+  <input type="number" class="qty-input form-control" 
+         id="qty-input" 
+         name="qty" 
+         value="1" 
+         min="1" 
+         max="<?= $detail_products->stok ?>" 
+         data-id-barang="<?= $detail_products->id_barang ?>">
+
+  <!-- <button class="btn btn-outline-info" id="add-cart">Add to cart</button> -->
+</div>
+
                             </td>
                         </tr>
                         <tr>
@@ -51,11 +50,46 @@
                     <!-- Tombol Aksi -->
                     <div class="d-flex justify-content-end gap-2">
                         <a href="<?= base_url('products') ?>" class="btn btn-outline-primary">Back</a>
-                        <button type="submit"><a href="<?= base_url('addCart/'.$detail_products->id_barang) ?>" class="btn btn-outline-info">Add to cart</a></button>
+                        <button type="submit" class="btn btn-outline-info" id="add-cart">Add to cart</button>
                         <a href="<?= base_url('admin/data-barang') ?>" class="btn btn-outline-success">Checkout</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
+
+<script>
+$(document).ready(function(){
+    $('#add-cart').on('click', function(){
+        let input = $('#qty-input');
+        let qty = parseInt(input.val());
+        let id_barang = input.data('id-barang');
+
+        console.log(qty);
+        
+        if(qty < 1 || isNaN(qty)){
+            alert('Jumlah tidak valid');
+            return;
+        }
+
+        $.ajax({
+            url : '<?= base_url('addCart') ?>',
+            method : 'POST',
+            data : {
+                id_barang: id_barang,
+                qty: qty
+            },
+            success: function(response){
+                console.log(response);
+                alert('Jumlah berhasil ditambahkan');
+            },
+            error: function(xhr, status, error){
+                console.error(error);
+                alert('Terjadi kesalahan saat menambahkan ke keranjang');
+            }
+        });
+    });
+});
+</script>

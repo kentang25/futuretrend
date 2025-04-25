@@ -50,15 +50,15 @@ class Cart extends FrontendController {
     {
         $barang = $this->M_cart->find($id_brg);
 
-        $qty = $this->input->post('qty');
-            var_dump($qty);
-            exit();
-        // $qty = 1;
-        // if($qty = $this->input->post('qty')){
-        //     $qty = $this->input->post('qty');
+        // $qty = $this->input->post('qty');
         //     var_dump($qty);
         //     exit();
-        // }
+        // $qty = 1;
+        if($qty = $this->input->post('qty')){
+            $qty = $this->input->post('qty');
+            // var_dump($qty);
+            // exit();
+        }
 
         $data = array(
             'id'    => $barang->id_barang,
