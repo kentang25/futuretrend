@@ -78,17 +78,23 @@ class Pembayaran extends FrontendController {
 
             $subtotal;
 
-        $status_pembayaran = "success";
+        $status_pembayaran = 'success';
+        
 
         $data_transaksi = array(
-            'id_order'          => $get_id_order,
+            'id_order'          => $get_id_order->id_order,
             'total_harga'       => $subtotal,
             'status_pembayaran' => $status_pembayaran,
             'metode_pembayaran' => 'paypal',
             'created_at'        => date('Y-m-d H:i:s')
         );
 
+        // var_dump($data_transaksi);
+        // exit();
+
         $transaksi = $this->M_pembayaran->created_transaksi($data_transaksi);
+        // var_dump($transaksi);
+        // exit();
 
         if($transaksi){
             $this->M_pembayaran->update_status_order($id_order);

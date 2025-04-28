@@ -57,6 +57,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin_future/admin';
 $route['admin/data-barang'] = 'admin_future/data_barang';
 $route['admin/data-cart'] = 'admin_future/data_cart';
+$route['admin/data-order'] = 'admin_future/data_order';
 $route['admin/karya'] = 'admin_future/upload_karya';
 $route['admin/galeri'] = 'admin_future/upload_galeri';
 

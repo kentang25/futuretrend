@@ -3,7 +3,7 @@
      <div class="container">
          <h1>Pernak-Pernik Cantik untuk Setiap Gaya</h1>
          <p>Temukan aksesoris unik yang membuat harimu lebih bersinar.</p>
-         <a href="#" class="btn-shop">Belanja Sekarang</a>
+         <a href="<?= base_url('products') ?>" class="btn-shop">Belanja Sekarang</a>
      </div>
  </div>
 
@@ -39,7 +39,7 @@
                  Kamu bisa berkreasi sendiri dengan idemu sendiri saat FutureTrend live crafting.<br>
                  Buat barang-barang kamu berkilau dengan kreasi mu sendiri.
              </p>
-             <button class="btn btn-sm btn-info rounded"><a href="#" class="text-white">Lihat Karya</a></button>
+             <button class="btn btn-sm btn-info rounded"><a href="<?= base_url('karya') ?>" class="text-white">Lihat Karya</a></button>
          </div>
 
          <!-- Showcase Image Section -->
@@ -74,7 +74,7 @@
          </div>
          <!-- Tombol Show All Gallery -->
          <div class="d-flex justify-content-center mt-5">
-             <a href="">Show all Gallery</a>
+             <a href="<?= base_url('galeri') ?>">Show all Gallery</a>
          </div>
      </div>
  </div>

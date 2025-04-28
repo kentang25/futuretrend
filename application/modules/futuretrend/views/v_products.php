@@ -29,7 +29,7 @@
                         </div>
                         <div class="trend_item_text">
                             <h4><?= $item->nama_brg; ?></h4>
-                            <h4 class="harga">Rp. <?= $item->harga; ?></h4>
+                            <h4 class="harga">Rp. <?= number_format($item->harga, 0, ',', '.'); ?></h4>
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -57,7 +57,7 @@
                     <a href="<?= base_url('products/detail/'. $all_p->id_barang); ?>"><img src="<?= base_url(). 'assets/uploads/'. $all_p->gambar ?>" class="img-fluid rounded-4 overflow-hidden gallery-img" alt="<?= $key ?>"></a>
                     <div class="kategori_item_text">
                         <h4><?= $all_p->nama_brg; ?></h4>
-                        <h4 class="harga">Rp. <?= $all_p->harga; ?></h4>
+                        <h4 class="harga">Rp. <?= number_format($all_p->harga, 0, ',', '.'); ?></h4>
                     </div>
                 </div>
             <?php endforeach; ?>

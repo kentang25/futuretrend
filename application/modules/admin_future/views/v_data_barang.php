@@ -29,7 +29,7 @@
             ?>
             <tbody>
                 <tr>
-                    <td><?= $no=+1 ?></td>
+                    <td><?= $no += 1 ?></td>
                     <td><?= $d_brg->nama_brg?></td>
                     <td><?= $d_brg->kategori?></td>
                     <td><?= $d_brg->harga?></td>

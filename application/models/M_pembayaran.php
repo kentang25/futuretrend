@@ -19,9 +19,9 @@
 
         // --- transaksi ---
 
-        public function created_transaksi()
+        public function created_transaksi($data)
         {
-            $query = $this->db->insert('tb_transaksi');
+            $query = $this->db->insert('tb_transaksi',$data);
             return $query;
         }
 
@@ -42,7 +42,7 @@
             $this->db->where('id_user',$id_user);
             $this->db->delete('tb_order');
 
-            $this->db->trans_complate();
+            $this->db->trans_complete();
 
             if($this->db->trans_status() === FALSE){
                 return FALSE;
