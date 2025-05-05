@@ -30,7 +30,7 @@
                         <tr>
                             <td class="p-4">
                                 <div class="media align-items-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    <img src="<?= base_url().'assets/uploads/'. $crt->gambar ?>"
                                         class="d-block ui-w-40 ui-bordered mr-4" alt="">
                                     <div class="media-body">
                                         <a href="#" class="d-block text-dark"><?= $crt->nama_barang ?></a>

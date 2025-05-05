@@ -46,7 +46,8 @@
                     <!-- Tombol Aksi -->
                     <div class="d-flex justify-content-end gap-2">
                         <a href="<?= base_url('products') ?>" class="btn btn-outline-primary">Back</a>
-                        <button type="submit" class="btn btn-outline-info" id="add-cart">Add to cart</button>
+                        <!-- <button type="submit" class="btn btn-outline-info" id="add-cart">Add to cart</button> -->
+                        <a href="<?= base_url('addCart/'.$detail_products->id_barang) ?>" class="btn btn-outline-success">Checkout</a>
                         <a href="<?= base_url('order') ?>" class="btn btn-outline-success">Checkout</a>
                     </div>
                 </div>

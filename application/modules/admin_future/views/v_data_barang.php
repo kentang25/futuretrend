@@ -14,6 +14,7 @@
     </form>
     <div class="table-responsive d-none d-md-block">
         <table class="table table-bordered">
+            
             <thead>
                 <tr>
                     <td>No</td>
@@ -40,8 +41,13 @@
                     </td>
                 </tr>
             </tbody>
-            <?php endforeach; ?>
+            <?php 
+                endforeach;
+                // echo $pagination;    
+            ?>
+            
         </table>
+        
     </div>
     <!-- Modal -->
     <div class="modal fade" id="modal_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

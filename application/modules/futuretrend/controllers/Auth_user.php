@@ -44,7 +44,7 @@ class Auth_user extends FrontendController {
         $this->form_validation->set_rules('konfirm_password','Konfirmasi_password','required|trim|matches[password]');
 
             if($this->form_validation->run() == FALSE){
-                $this->template_user('auth_user/v_register',$this->data, true);
+                $this->template_login('auth_user/v_register',$this->data, true);
             }else{
                 $data = $this->M_auth_user->insert_data_user();
                 // var_dump($data);
@@ -64,7 +64,7 @@ class Auth_user extends FrontendController {
         $this->form_validation->set_rules('password','Password','required|trim');
 
             if($this->form_validation->run() == FALSE){
-                $this->template_user('auth_user/v_login', $this->data, true);
+                $this->template_login('auth_user/v_login', $this->data, true);
             }else{
                 $username = $this->input->post('username');
                 $password = $this->input->post('password');
@@ -88,6 +88,12 @@ class Auth_user extends FrontendController {
                     redirect(base_url('futuretrend'));
                 }
             }
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 
 }

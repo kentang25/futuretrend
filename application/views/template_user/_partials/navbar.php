@@ -31,12 +31,15 @@
                         <li><a href="#" class="dropdown-item">Event</a></li>
                     </ul>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link fw-semibold text-dark px-3 py-2 rounded-pill" href="<?= base_url('kontak') ?>">Kontak</a>
+                </li>
+
+                <!-- Tombol Logout -->
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold text-white bg-danger px-3 py-2 rounded-pill" href="<?= base_url('logout') ?>">Logout</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-

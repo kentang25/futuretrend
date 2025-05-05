@@ -8,6 +8,18 @@
             return $query;
         }
 
+        public function get($start = null,$limit = null)
+        {
+            $query = $this->db->get('tb_data_barang',$start,$limit);
+            return $query->result();
+        }
+
+        public function get_count()
+        {
+            $query = $this->db->get('tb_data_barang');
+            return $query->num_rows();
+        }
+
         public function insert_data()
         {
             $nama_brg   = $this->input->post('nama_brg');

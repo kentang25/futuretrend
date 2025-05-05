@@ -58,12 +58,14 @@ $route['admin'] = 'admin_future/admin';
 $route['admin/data-barang'] = 'admin_future/data_barang';
 $route['admin/data-cart'] = 'admin_future/data_cart';
 $route['admin/data-order'] = 'admin_future/data_order';
+$route['admin/data-transaksi'] = 'admin_future/data_transaksi';
 $route['admin/karya'] = 'admin_future/upload_karya';
 $route['admin/galeri'] = 'admin_future/upload_galeri';
 
 // --- auth user ----
 $route['register'] = 'futuretrend/auth_user/register';
 $route['login'] = 'futuretrend/auth_user/login';
+$route['logout'] = 'futuretrend/auth_user/logout';
 
 // --- user futuretrend ----
 $route['futuretrend'] = 'futuretrend/futuretrend';

@@ -70,14 +70,24 @@ class Cart extends FrontendController {
         $this->cart->insert($data);
 
         $get_user = $this->M_auth_user->get_id_user();
+        $get_gambar = $this->M_cart->get_gambar($barang->id_barang);
+
+        
+
+        var_dump($get_gambar);
+        exit();
 
         $data_cart = array(
             'id_user'       => $get_user,
             'id_barang'     => $data['id'],
             'nama_barang'   => $data['name'],
             'harga'         => $data['price'],
-            'jumlah'        => $data['qty']
+            'jumlah'        => $data['qty'],
+            'gambar'        => $get_gambar->gambar
         );
+
+        // var_dump($data_cart);
+        // exit();
 
         if($this->M_cart->insert_data_cart($data_cart)){
             redirect('cart');

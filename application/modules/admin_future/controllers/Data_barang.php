@@ -38,9 +38,30 @@ class Data_barang extends BackendController {
      */
 	public function index() {
 
-        $this->data['barang'] = $this->M_data_barang->tampil_data()->result();
+        // $base_url = base_url('admin_future/data_barang/index');
+        // $per_page = 3;
+        // // for ($i = 1; $i <= 5; $i++) {
+        // //     echo "Segment $i: " . $this->uri->segment($i) . "<br>";
+        // // }
+        
+        // $uri_segment = 4;
 
-		$this->template_admin('v_data_barang', $this->data, true);
+        // $total_rows = $this->M_data_barang->get_count();
+        // // var_dump($total_rows);
+        // // exit();
+        // $offset     = $this->uri->segment($uri_segment,0);
+        // // var_dump($offset);
+        // // exit();
+
+        // $this->data['barang'] = $this->M_data_barang->get($per_page,$offset);
+
+        // $pag = $this->data['pagination'] = pagination_helper($base_url,$total_rows,$per_page,$uri_segment);
+        // var_dump($pag);
+        // exit();
+		// $this->template_admin('v_data_barang', $this->data, true);
+
+        $this->data['barang'] = $this->M_data_barang->tampil_data()->result();
+        $this->template_admin('v_data_barang',$this->data,true);
 	}
 
     public function insert()

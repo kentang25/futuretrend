@@ -32,6 +32,13 @@
             $this->db->where('id_barang',$id_barang);
             return $this->db->update('tb_cart',['jumlah'=>$jumlah]);
         }
+
+        public function get_gambar($id_barang)
+        {
+            $query = $this->db->get_where('tb_data_barang', array('id_barang' => $id_barang));
+            return $query->row(); // KUNCI FIX
+        }
+
     }
 
 ?>
