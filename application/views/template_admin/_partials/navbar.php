@@ -64,7 +64,7 @@
 
                 <!-- Nav Item - User Information -->
                 <ul class="nav navbar-nav navbar-right">
-                    <div><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <div><a href="<?= base_url('admin/logout') ?>"><i class="fa-solid fa-right-from-bracket"></i></a></div>
                 </ul>
 
             </div>

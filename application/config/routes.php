@@ -53,6 +53,12 @@ $route['default_controller'] = 'futuretrend';
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;
 
+// --- auth admin futuretrend ----
+
+$route['admin/register'] = 'admin_future/auth_admin/auth_admin_future/register';
+$route['admin/login'] = 'admin_future/auth_admin/auth_admin_future/login';
+$route['admin/logout'] = 'admin_future/auth_admin/auth_admin_future/login';
+
 // --- admin futuretrend ---
 $route['admin'] = 'admin_future/admin';
 $route['admin/data-barang'] = 'admin_future/data_barang';
