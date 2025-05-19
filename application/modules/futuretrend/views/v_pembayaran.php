@@ -1,20 +1,20 @@
 <section class="checkout spad">
     <div class="container">
         
-        <div class="row justify-content-center mb-4">
+        <!-- <div class="row justify-content-center mb-4">
             <div class="col-lg-10 text-center">
                 <h6 class="coupon__link">
                     <span class="icon_tag_alt"></span> 
                     <a href="#">Have a coupon?</a> Click here to enter your code.
                 </h6>
             </div>
-        </div>
+        </div> -->
 
         <?php foreach($order_items as $key => $o_item) : ?>
             <form action="<?= site_url('futuretrend/pembayaran/transaksi/'. $o_item->id_user) ?>" class="checkout__form">
         <?php endforeach; ?>
 
-            <div class="row">
+            <div class="row mt-5">
                 <!-- Billing Details -->
                 <div class="col-lg-8 mb-5">
                     <div class="p-4 border rounded shadow-sm">

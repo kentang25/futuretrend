@@ -50,15 +50,16 @@ class Cart extends FrontendController {
     {
         $barang = $this->M_cart->find($id_brg);
 
-        // $qty = $this->input->post('qty');
+        $qty = $this->input->post('qty');
         //     var_dump($qty);
         //     exit();
         // $qty = 1;
         if($qty = $this->input->post('qty')){
             $qty = $this->input->post('qty');
-            // var_dump($qty);
-            // exit();
+            
         }
+        // var_dump($qty);
+        // exit();
 
         $data = array(
             'id'    => $barang->id_barang,
@@ -74,8 +75,8 @@ class Cart extends FrontendController {
 
         
 
-        var_dump($get_gambar);
-        exit();
+        // var_dump($get_gambar);
+        // exit();
 
         $data_cart = array(
             'id_user'       => $get_user,
@@ -98,7 +99,6 @@ class Cart extends FrontendController {
     public function update_qty()
     {
         $id_barang  = $this->input->post('id_barang');
-        $harga      = $this->input->post('harga');
         $jumlah     = $this->input->post('jumlah');
 
         $this->M_cart->update_cart_qty($id_barang,$jumlah);
